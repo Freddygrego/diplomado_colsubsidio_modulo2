@@ -8,10 +8,10 @@ console.log("Python is cool ");*/
 //         console.log(algo)
 //     }
 // }   
-// function llamar (param1, param2){       //ejercicio 3
-//     console.log(param1 +" " + "is" + " " + param2)
-
-// }
-function llamar (param1, param2){
-    console.log(param1)
-}
+function llamar (algo){      
+        console.log(typeof algo)        
+        if (typeof algo === 'number'){
+        console.log(`my number: ${algo}`)
+    }else{
+        console.log("not a number");
+    }
