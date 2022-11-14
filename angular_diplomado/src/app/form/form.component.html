@@ -1,0 +1,44 @@
+<h1>Formulario</h1>
+
+<input type="text" [(ngModel)]="name">
+
+<p>{{name}}</p>
+
+<h2>*ngIf</h2>
+<input type="text" required [(ngModel)]="name"/>
+<p *ngIf="name === 'Nicolas'">Soy {{name}}</p>
+<p *ngIf="name === 'Freddy'">texto</p>
+
+<h2>*ngFor</h2>
+<input type="text" required [(ngModel)]="newName" >
+<button (click)="addName()">Add name</button>
+<p>Listas sin estilo</p>
+<ul class="lista">    
+    <li *ngFor="let name of names; index as i">
+        {{name}}
+    </li>    
+</ul>
+<p>Lista con letras griegas</p>
+<ol class="griego">    
+    <li *ngFor="let name of names; index as i">
+        {{name}}
+    </li>    
+</ol>
+<p>Listas con circulos</p>
+<ul class="circle">    
+    <li *ngFor="let name of names; index as i">
+        {{name}}
+    </li>    
+</ul>
+<p>Listas con cuadrados</p>
+<ul class="square">    
+    <li *ngFor="let name of names; index as i">
+        {{name}}
+    </li>    
+</ul>
+<p>Listas con números romanos</p>
+<ol class="romano">    
+    <li *ngFor="let name of names; index as x">
+        {{name}}
+    </li>    
+</ol>
